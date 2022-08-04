@@ -1,125 +1,101 @@
-@extends('layouts.app')
+@extends('layouts.admin.master')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+<form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
+@csrf
+					<span class="login100-form-title p-b-26">
+						Welcome Sing up
+					</span>
+					<span class="login100-form-title p-b-48">
+						<i class="zmdi zmdi-font"></i>
+					</span>
 
 
-                        <div class="row mb-3">
-                            <label for="username" class="col-md-4 col-form-label text-md-end">{{ __('Username') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
-
-                                @error('username')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                    <!-- 1 -->
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="name">
+						<span class="focus-input100" data-placeholder="Name"></span>
+					</div>
 
 
-                        <div class="row mb-3">
-                            <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
-
-                                @error('address')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                    <!-- 2 -->
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="username">
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
 
 
-                        <div class="row mb-3">
-                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Phone') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
-
-                                @error('phone')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                    <!-- 3 -->
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="address">
+						<span class="focus-input100" data-placeholder="Address"></span>
+					</div>
 
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+					
+                    <!-- 4 -->
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="phone">
+						<span class="focus-input100" data-placeholder="Phone"></span>
+                    </div>
 
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                    <!-- 5 -->
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="email" name="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
 
 
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                    <!-- 6 -->
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="password">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
+					<div class="wrap-input100 validate-input" data-validate="Enter password confirm">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="password_confirmation">
+						<span class="focus-input100" data-placeholder="password confirm"></span>
+					</div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+                    
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button   type="submit" class="login100-form-btn">
+								Register
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-10">
+						<span class="txt1">
+							Don’t have an account?
+						</span>
+
+						<a class="txt2" href="{{ route('login') }}">
+							login
+						</a>
+					<div class="text-center p-t-10">
+						<a class="txtl" href="{{ route('password.request') }}">
+								Forgot Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-10">
+                        <a class="txt1" href="{{ url ('/') }}">
+                            go to home
+                        </a>
+                    </div>
+					</div>
+				</form>
+
 @endsection
