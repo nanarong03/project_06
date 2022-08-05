@@ -11,8 +11,8 @@
 	</span>
 
 	<div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-		<input id="username" type="text" class="input100" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
-		<span class="focus-input100" data-placeholder="{{ __('Username') }}"></span>
+		<input id="email" type="email" class="input100" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+		<span class="focus-input100" data-placeholder="{{ __('email') }}"></span>
 	</div>
 
 	<div class="wrap-input100 validate-input" data-validate="Enter password">
