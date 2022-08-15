@@ -11,7 +11,7 @@
 	</span>
 
 	<div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-		<input id="email" type="email" class="input100" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+		<input id="email" type="email" class="input100" name="email" value="{{ ('email') }}" required autocomplete="email" autofocus>
 		<span class="focus-input100" data-placeholder="Email"></span>
 	</div>
 
