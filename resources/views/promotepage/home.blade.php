@@ -85,31 +85,6 @@
         </div>
       </div>
       <!-- slider item -->
-      <div class="hero-slider-item">
-        <div class="row">
-          <div class="col-md-8">
-            <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3"
-              data-animation-in="fadeInDown" data-delay-in=".1">BB belt shop</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3"
-              data-animation-in="fadeInDown" data-delay-in=".4">ร้านขายเข็มขัด บีบี</p>
-            <a href="contact.php" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5"
-              data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">ที่อยู่ - ที่ติดต่อ</a>
-          </div>
-        </div>
-      </div>
-      <!-- slider item -->
-      <div class="hero-slider-item">
-        <div class="row">
-          <div class="col-md-8">
-            <h1 class="text-white" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3"
-              data-animation-in="fadeInUp" data-delay-in=".1">BB belt shop</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3"
-              data-animation-in="fadeInUp" data-delay-in=".4">ร้านขายเข็มขัด บีบี</p>
-            <a href="contact.php" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5"
-              data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">ที่อยู่ - ที่ติดต่อ</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>

@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navigation">
           <ul class="navbar-nav ml-auto text-center">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">หน้าแรก</a>
+              <a class="nav-link" href="{{ url('/') }}">หน้าแรก</a>
             </li>
             <li class="nav-item dropdown view">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -40,8 +40,8 @@
                 ข้อมูลสินค้า
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="product.php">สินค้า</a>
-                <a class="dropdown-item" href="teacher-single.php">สินค้าเเนะนำ</a>
+                <a class="dropdown-item" href="{{ url('/product') }}">สินค้า</a>
+                <a class="dropdown-item" href="{{ url('/teacher') }}">สินค้าเเนะนำ</a>
           <!--  <a class="dropdown-item" href="notice.php">Notice</a>
                 <a class="dropdown-item" href="notice-single.php">Notice Details</a>
                 <a class="dropdown-item" href="research.php">Research</a>
@@ -52,10 +52,10 @@
               </div>
             </li>
             <li class="nav-item @@about">
-              <a class="nav-link" href="about.php">ข่าวสารกิจกรรม</a>
+              <a class="nav-link" href="{{ url('/about') }}">ข่าวสารกิจกรรม</a>
             </li>
             <li class="nav-item @@contact">
-              <a class="nav-link" href="contact.php">ที่อยู่ - ติดต่อ</a>
+              <a class="nav-link" href="{{ url('/contact') }}">ที่อยู่ - ติดต่อ</a>
             </li>
           </ul>
         </div>
